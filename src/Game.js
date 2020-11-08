@@ -1,4 +1,5 @@
 const Player = require('./Player');
+const Round = require('./Round');
 
 module.exports =  class Game {
 
@@ -6,6 +7,8 @@ module.exports =  class Game {
         this.client = bot;
         this.players = [];
         this.numberOfPlayer = 0;
+        this.roundCount = 0;
+   
     }
 
      newGame(message) {
@@ -31,7 +34,9 @@ module.exports =  class Game {
             }
 
             if (message.content === "-d go"){
-                Player.randomDm(this.players);
+                Player.randomDm(this.players);          
+                Round.endRound(channel,this.roundCount);
+          
             }
 
         })

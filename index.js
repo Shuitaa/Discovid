@@ -13,4 +13,4 @@ bot.on("message", message => {
 
 })
 
-bot.login('Nzc0NzUyMDU1OTUyNDA4NjA5.X6cWFA.3laWblbplA8f0pZVAnwieftMijI');
+bot.login('');
